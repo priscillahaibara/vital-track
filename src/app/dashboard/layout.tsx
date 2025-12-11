@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "@/components/layout/Header";
 import TabNavigation from "@/components/layout/TabNavigation";
 
 type LayoutProps = {
@@ -8,7 +9,8 @@ type LayoutProps = {
 export default function Layout({ children }: LayoutProps) {
   return (
     <div>
-      <div>{children}</div>
+      <Header />
+      <main className="px-6 py-4">{children}</main>
       <TabNavigation />
     </div>
   );
